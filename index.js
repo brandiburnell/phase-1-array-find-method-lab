@@ -2,32 +2,19 @@
 
 function superbowlWin(record) {
 
-    let superBowlWinYear;
+    // function isWinningYear(element, index, array) {
+    //     return (element.result === "W");
+    // }
 
-    function isWinningYear(element, index, array) {
-        return (element.result === "W");
-    }
-
-    let ret = record.find(isWinningYear);
+    let ret = record.find(element => element.result === "W");
     if (ret === undefined) {
         return undefined;
-    } else{
+    } else {
         return ret.year;
     }
 
 }
 
-
-// function superbowlWin(element) {
-//     console.log("year", element.year);
-//     console.log("result", element.result);
-
-//     if (element.result === "W") {
-//         return element.year;
-//     } else {
-//         return undefined;
-//     }
-// }
 
 
 
